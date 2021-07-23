@@ -1,4 +1,4 @@
-package com.jay.cn.juc;
+package com.jay.cn.juc.test;
 
 /**
  * 银行账户，对写方法加锁，读方法不加锁，是否可行？

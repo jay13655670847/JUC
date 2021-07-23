@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+TestAQS -> ReenTrantLock: lock()
+ReenTrantLock --> NonfairSync: sync.lock();
+
+NonfairSync -> AbstractQueuedSynchronizer: compareAndSetState(0, 1)
+Alice <-- Bob: another authentication Response
+@enduml
