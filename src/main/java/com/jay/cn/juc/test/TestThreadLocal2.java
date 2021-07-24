@@ -1,5 +1,9 @@
 package com.jay.cn.juc.test;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 public class TestThreadLocal2 {
 
     static ThreadLocal<String> t = new InheritableThreadLocal<>();
@@ -7,6 +11,8 @@ public class TestThreadLocal2 {
     public static void main(String[] args) {
 
         t.set("hello threadLocal");
+
+        Map<Object, Object> map = Collections.synchronizedMap(new HashMap<>());
 
         try {
             //set
