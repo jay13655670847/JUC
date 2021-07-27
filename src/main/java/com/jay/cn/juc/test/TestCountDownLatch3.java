@@ -1,6 +1,6 @@
 package com.jay.cn.juc.test;
 
-import ch.qos.logback.core.util.DatePatternToRegexUtil;
+
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

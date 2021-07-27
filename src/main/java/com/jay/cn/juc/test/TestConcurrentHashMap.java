@@ -34,7 +34,15 @@ public class TestConcurrentHashMap {
         Queue<String> strings = new ConcurrentLinkedQueue<>();
         SynchronousQueue<Object> queue = new SynchronousQueue<>();
         TransferQueue transferQueue = new LinkedTransferQueue<>();
-        
+
+        Callable callable = new Callable() {
+            @Override
+            public Object call() throws Exception {
+                return null;
+            }
+        };
+
+
 
         Thread[] threads =new Thread[THREAD_COUNT];
 

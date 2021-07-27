@@ -1,9 +1,7 @@
 package com.jay.cn.juc.test;
 
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class TestHashMap {
 
@@ -11,6 +9,8 @@ public class TestHashMap {
     public static final int THREAD_COUNT = 100;
 
     static Map<UUID,UUID> hashtable =new HashMap<UUID,UUID>();
+    static Map<Object, Object> map = Collections.synchronizedMap(new HashMap<>());
+    //static Map<Object, Object> map = new ConcurrentHashMap<>();
 
     static UUID[] keys =new UUID[COUNT];
     static UUID[] values =new UUID[COUNT];

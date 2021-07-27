@@ -97,6 +97,6 @@ public class Test1A2B3C {
 
     public static void main(String[] args) {
         testWaitNotify();
-        testLockSupport();
+       // testLockSupport();
     }
 }
