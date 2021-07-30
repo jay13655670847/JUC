@@ -2,6 +2,8 @@ package com.jay.cn.juc.test;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicStampedReference;
 
 public class TestHashMap {
 
@@ -23,6 +25,10 @@ public class TestHashMap {
     }
 
     public static void main(String[] args) {
+
+        AtomicInteger atomicInteger = new AtomicInteger();
+        AtomicStampedReference<Object> reference = new AtomicStampedReference<>(1,1);
+
 
         Thread[] threads =new Thread[THREAD_COUNT];
 
@@ -86,4 +92,5 @@ public class TestHashMap {
         end = System.currentTimeMillis();
 
     }
+
 }
